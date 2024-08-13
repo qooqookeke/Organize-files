@@ -13,12 +13,11 @@ def move_images(src_folder, front_folder, Rside_folder, Lside_folder):
         file_path = os.path.join(src_folder, filename)
         
         if os.path.isfile(file_path):
-            if filename[-1] == '0':  
+            if filename[-5] == '0':  
                 shutil.move(file_path, os.path.join(front_folder, filename))
-                print(f"Moved to front_folder: {filename}")
-            elif filename[-1] == '1':  
+            elif filename[-5] == '1':  
                 shutil.move(file_path, os.path.join(Rside_folder, filename))
-            elif filename[-1] == '2':
+            elif filename[-5] == '2':
                 shutil.move(file_path, os.path.join(Lside_folder, filename))
 
 src_folder = 'images'  # 원본
