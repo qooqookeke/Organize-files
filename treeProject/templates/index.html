@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory Tree with Images</title>
+    <style>
+        .folder {
+            padding: 5px;
+            border-left: 2px solid #ccc;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .folder-content {
+            margin-left: 20px;
+        }
+        .images {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        .image {
+            border: 1px solid #ddd;
+            padding: 2px;
+        }
+        .image img {
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Directory Tree with Images</h1>
+    <div id="directory-tree">
+        {% for item in dir_structure %}
+            <div class="folder" style="margin-left: {{ item.depth * 20 }}px;">
+                <strong>{{ item.folder_name }}/</strong> ({{ item.image_count }} images)
+                <div class="folder-content">
+                    <div class="images">
+                        {% for img_path in item.image_paths %}
+                            <div class="image">
+                                <img src="{{ url_for('serve_image', filename=img_path) }}" alt="Image" height="50">
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

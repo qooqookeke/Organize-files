@@ -21,8 +21,8 @@ def convert_tif_to_jpg(src_folder, jpg_folder):
             print(jpg_path)
 
 # 경로 설정
-src_folder = './images/front'  # .tif 파일이 있는 폴더
-jpg_folder = './images/front/jpg/'  # .jpg 파일을 저장할 폴더
+src_folder = 'E:/both_shoulder_ap_1/'  # .tif 파일이 있는 폴더
+jpg_folder = 'E:/both_shoulder_ap_1/jpg'  # .jpg 파일을 저장할 폴더
 
 # 변환 함수 호출
 convert_tif_to_jpg(src_folder, jpg_folder)
