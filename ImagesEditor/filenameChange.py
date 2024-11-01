@@ -25,13 +25,13 @@ def rename_files(src_folder, prefix='', suffix='', replace_str='', new_str='', s
         print(f"Renamed: {filename} -> {new_name}")
 
 # 경로 설정 중요!
-src_folder = 'C:/Users/MYCOM/Downloads/imageData/홍복희 444515/'
+src_folder = 'D:/이미지 정리/imageData/'
 
 
 # 파일명 변경 함수 호출
 rename_files(
     src_folder, 
-    prefix='444515_',  # 파일 이름 앞에 붙일 접두사
+    prefix='33333_',  # 파일 이름 앞에 붙일 접두사
     # suffix='_foot',  # 파일 이름 뒤에 붙일 접미사
     # replace_str='',  # 교체할 문자열
     # new_str='',  # 교체 후 문자열
